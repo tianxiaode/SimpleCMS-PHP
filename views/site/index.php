@@ -2,52 +2,60 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
 ?>
-<div class="site-index">
+<!DOCTYPE HTML>
+<html manifest="">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes">
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
+    <title>SimpleCMS</title>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+    <!--
+    <script type="text/javascript">
+        var Ext = Ext || {}; // Ext namespace won't be defined yet...
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
+        // This function is called by the Microloader after it has performed basic
+        // device detection. The results are provided in the "tags" object. You can
+        // use these tags here or even add custom tags. These can be used by platform
+        // filters in your manifest or by platformConfig expressions in your app.
+        //
+        Ext.beforeLoad = function (tags) {
+            var s = location.search,  // the query string (ex "?foo=1&bar")
+                profile;
 
-    <div class="body-content">
+            // For testing look for "?classic" or "?modern" in the URL to override
+            // device detection default.
+            //
+            if (s.match(/\bclassic\b/)) {
+                profile = 'classic';
+            }
+            else if (s.match(/\bmodern\b/)) {
+                profile = 'modern';
+            }
+            else {
+                profile = tags.desktop ? 'classic' : 'modern';
+                //profile = tags.phone ? 'modern' : 'classic';
+            }
 
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+            Ext.manifest = profile; // this name must match a build profile name
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+            // This function is called once the manifest is available but before
+            // any data is pulled from it.
+            //
+            //return function (manifest) {
+                // peek at / modify the manifest object
+            //};
+        };
+    </script>
+    -->
+    <script type="text/javascript">
+    var ROOTPATH = 'http://localhost:8081';
+    </script>
+    <!-- The line below must be kept intact for Sencha Cmd to build your application -->
+    <script id="microloader" data-app="ec76e80e-0468-40dc-b530-bdee31b8d342" type="text/javascript" src="sencha/bootstrap.js"></script>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
-
-    </div>
-</div>
+</head>
+<body></body>
+</html>
